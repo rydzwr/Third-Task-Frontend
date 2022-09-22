@@ -1,0 +1,9 @@
+<label for="fvalue">Enter name:</label><br />
+<input type="text" id="value" value="value" #value />
+<button (click)="sendNameClicked(value.value)">OK</button>
+
+<p *ngIf="status === 'invalidName'">Name Should Not Be Empty!</p>
+
+<p *ngIf="validated !== undefined && validated !== null">
+  {{ validated.value }}
+</p>
